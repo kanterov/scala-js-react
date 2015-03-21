@@ -14,7 +14,7 @@ object ScalaJSReact extends Build {
   val scalaReflect = "org.scala-lang" % "scala-reflect" % SCALA_VERSION
   val macroParadisePlugin = compilerPlugin("org.scalamacros" % "paradise" % "2.0.1" cross CrossVersion.full)
   val jasmine = "org.scala-js" %% "scalajs-jasmine-test-framework" % scalaJSVersion % "test"
-  val reactjs = "org.webjars" % "react" % "0.11.0" / "react.js" commonJSName "React"
+  val reactjs = "org.webjars" % "react" % "0.11.0" / "META-INF/resources/webjars/react/0.11.0/react.js" commonJSName "React"
 
   val commonSettings = Seq(
     version := "0.3.4-SNAPSHOT",
