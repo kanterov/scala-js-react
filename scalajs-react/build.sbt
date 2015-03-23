@@ -2,6 +2,8 @@ import SonatypeKeys._
 
 sonatypeSettings
 
+seq(bintrayPublishSettings: _*)
+
 pomExtra := {
   <scm>
     <connection>scm:git:github.com/kanterov/scala-js-react.git</connection>

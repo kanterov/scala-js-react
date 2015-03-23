@@ -15,6 +15,8 @@ enablePlugins(ScalaJSPlugin)
 
 scalaVersion := "2.11.6"
 
+resolvers += "scalajs-react bintray" at "http://dl.bintray.com/kanterov/maven"
+
 libraryDependencies ++= Seq(
   "com.kanterov.scalajs" %%% "scalajs-react" % "0.3.4",
   compilerPlugin("org.scalamacros" % "paradise" % "2.0.1" cross CrossVersion.full)
