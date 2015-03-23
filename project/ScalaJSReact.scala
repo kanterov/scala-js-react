@@ -16,6 +16,12 @@ object ScalaJSReact extends Build {
   val jasmine = "org.scala-js" %% "scalajs-jasmine-test-framework" % scalaJSVersion % "test"
   val reactjs = "org.webjars" % "react" % "0.11.0" / "META-INF/resources/webjars/react/0.11.0/react.js" commonJSName "React"
 
+  val sourceMapOpt = {
+    val a = new java.io.File("").toURI.toString.replaceFirst("/$", "")
+    val g = "https://raw.githubusercontent.com/kanterov/scala-js-react/release-0.3.4"
+    s"-P:scalajs:mapSourceURI:$a->$g/"
+  }
+
   val commonSettings = Seq(
     version := "0.3.4",
     organization := "com.kanterov.scalajs",
@@ -24,7 +30,9 @@ object ScalaJSReact extends Build {
     homepage := Some(url("http://github.com/kanterov/scala-js-react/")),
     scalacOptions := Seq("-unchecked", "-deprecation",
       "-encoding", "utf8", "-feature", "-Yinline-warnings",
-      "-language:implicitConversions", "-language:higherKinds")
+      "-language:implicitConversions", "-language:higherKinds",
+      sourceMapOpt
+    )
   )
 
   lazy val react = Project("scalajs-react", file("scalajs-react"))
