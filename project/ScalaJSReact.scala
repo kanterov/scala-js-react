@@ -18,10 +18,10 @@ object ScalaJSReact extends Build {
 
   val commonSettings = Seq(
     version := "0.3.4-SNAPSHOT",
-    organization := "com.xored.scalajs",
+    organization := "com.kanterov.scalajs",
     scalaVersion := SCALA_VERSION,
     licenses := Seq("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0.html")),
-    homepage := Some(url("http://github.com/xored/scala-js-react/")),
+    homepage := Some(url("http://github.com/kanterov/scala-js-react/")),
     scalacOptions := Seq("-unchecked", "-deprecation",
       "-encoding", "utf8", "-feature", "-Yinline-warnings",
       "-language:implicitConversions", "-language:higherKinds")

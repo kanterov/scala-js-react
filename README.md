@@ -1,7 +1,7 @@
 scala-js-react
 ============
-[![Build Status](https://travis-ci.org/xored/scala-js-react.svg?branch=master)](https://travis-ci.org/xored/scala-js-react)
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/xored/scala-js-react?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build Status](https://travis-ci.org/kanterov/scala-js-react.svg?branch=master)](https://travis-ci.org/kanterov/scala-js-react)
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kanterov/scala-js-react?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Scala-js-react provides nice statically typed interface to [Facebook's React](http://facebook.github.io/react/).
 
@@ -16,7 +16,7 @@ enablePlugins(ScalaJSPlugin)
 scalaVersion := "2.11.5"
 
 libraryDependencies ++= Seq(
-  "com.xored.scalajs" %%% "scalajs-react" % "0.3.3",
+  "com.kanterov.scalajs" %%% "scalajs-react" % "0.3.3",
   compilerPlugin("org.scalamacros" % "paradise" % "2.0.1" cross CrossVersion.full)
 )
 ```
@@ -140,6 +140,7 @@ object Say extends TypedReactSpec with TypedEventListeners {
 # Copyright
 
 Copyright © 2014 Xored Software, Inc.
+Copyright © 2015 Gleb Kanterov
 
 Licensed under the Apache License, Version 2.0.
 
