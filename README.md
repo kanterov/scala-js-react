@@ -13,24 +13,24 @@ For detailed sbt configuration please refer to [scala.js documentation](http://w
 ```scala
 enablePlugins(ScalaJSPlugin)
 
-scalaVersion := "2.11.6"
+scalaVersion := "2.11.7"
 
 resolvers += "scalajs-react bintray" at "http://dl.bintray.com/kanterov/maven"
 
 libraryDependencies ++= Seq(
-  "com.kanterov.scalajs" %%% "scalajs-react" % "0.3.4",
+  "com.kanterov.scalajs" %%% "scalajs-react" % "0.4.0",
   compilerPlugin("org.scalamacros" % "paradise" % "2.0.1" cross CrossVersion.full)
 )
 ```
 
 `project/plugins.sbt`
 ```scala
-addSbtPlugin("org.scala-js" % "sbt-scalajs" % "0.6.2")
+addSbtPlugin("org.scala-js" % "sbt-scalajs" % "0.6.5")
 ```
 
 `project/build.properties`
 ```
-sbt.version=0.13.7
+sbt.version=0.13.8
 ```
 
 # Features
