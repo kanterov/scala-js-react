@@ -5,7 +5,7 @@ import com.kanterov.scalajs.react.util._
 import org.scalajs.dom._
 
 import scala.scalajs.js.annotation.JSExport
-import org.scalajs.dom.extensions.KeyCode
+import org.scalajs.dom.ext.KeyCode
 
 @JSExport("TodoApp")
 object TodoApp extends TypedReactSpec with TypedEventListeners {

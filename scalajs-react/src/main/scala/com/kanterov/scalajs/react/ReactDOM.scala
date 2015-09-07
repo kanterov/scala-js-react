@@ -22,7 +22,7 @@ import org.scalajs.dom._
 import com.kanterov.scalajs.react.interop.ReactJS
 
 @js.native
-trait ReactDOM extends HTMLElement
+trait ReactDOM extends html.Element
 
 @js.native
 trait ReactDOMRef extends js.Object {

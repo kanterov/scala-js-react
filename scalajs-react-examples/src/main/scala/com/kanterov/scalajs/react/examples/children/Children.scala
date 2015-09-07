@@ -56,7 +56,7 @@ object Children {
     }
   }
 
-  def main(parent: HTMLElement) = {
+  def main(parent: html.Element) = {
     @scalax val buttons = <div className="toolbars">
       {
         ButtonToolbar(

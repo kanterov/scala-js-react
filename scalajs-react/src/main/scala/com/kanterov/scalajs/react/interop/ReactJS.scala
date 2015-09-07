@@ -30,7 +30,7 @@ import com.kanterov.scalajs.react.ReactDOM
 object ReactJS extends js.Object {
   def createClass[State, Props, T](spec: js.Dictionary[T]): ReactComponentClass[State, Props] = js.native
 
-  def renderComponent[C <: ReactDOM](component: C, container: dom.HTMLElement): C = js.native
+  def renderComponent[C <: ReactDOM](component: C, container: dom.html.Element): C = js.native
 
   def renderComponentToString(dom: ReactDOM): String = js.native
 

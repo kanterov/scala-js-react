@@ -14,7 +14,7 @@ import com.kanterov.scalajs.react.examples.export.Export
 object App {
 
   @JSExport
-  def todoApp(parent: HTMLElement) = {
+  def todoApp(parent: html.Element) = {
     React.renderComponent(
       TodoApp(TodoApp.Props()),
       parent
@@ -22,7 +22,7 @@ object App {
   }
 
   @JSExport
-  def timer(parent: HTMLElement) = {
+  def timer(parent: html.Element) = {
     React.renderComponent(
       Timer(Timer.Props()),
       parent
@@ -30,7 +30,7 @@ object App {
   }
 
   @JSExport
-  def hello(parent: HTMLElement) = {
+  def hello(parent: html.Element) = {
     React.renderComponent(
       HelloMessage(HelloMessage.Props("Jack")),
       parent
@@ -38,7 +38,7 @@ object App {
   }
 
   @JSExport
-  def say(parent: HTMLElement) = {
+  def say(parent: html.Element) = {
     React.renderComponent(
       Say(Say.Props()),
       parent
@@ -46,7 +46,7 @@ object App {
   }
 
   @JSExport
-  def export(parent: HTMLElement) = {
+  def export(parent: html.Element) = {
     React.renderComponent(
       Export(Export.Props()),
       parent
@@ -54,7 +54,7 @@ object App {
   }
 
   @JSExport
-  def children(parent: HTMLElement) = {
+  def children(parent: html.Element) = {
     Children.main(parent)
   }
 

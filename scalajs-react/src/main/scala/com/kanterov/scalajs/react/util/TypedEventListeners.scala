@@ -66,39 +66,39 @@ trait TypedEventListeners {
     def onWheel(e: TypedWheelEvent[T] => Unit): js.Function1[TypedWheelEvent[T], Unit] = js.Any.fromFunction1(e)
   }
 
-  object element extends ElementEventListeners[HTMLElement]
+  object element extends ElementEventListeners[html.Element]
 
-  object input extends ElementEventListeners[HTMLInputElement] {
+  object input extends ElementEventListeners[html.Input] {
     def onChange(e: TypedInputFormEvent => Unit): js.Function1[TypedInputFormEvent, Unit] = js.Any.fromFunction1(e)
     def onInput(e: TypedInputFormEvent => Unit): js.Function1[TypedInputFormEvent, Unit] = js.Any.fromFunction1(e)
     def onSubmit(e: TypedInputFormEvent => Unit): js.Function1[TypedInputFormEvent, Unit] = js.Any.fromFunction1(e)
   }
 
-  object textarea extends ElementEventListeners[HTMLInputElement] {
+  object textarea extends ElementEventListeners[html.Input] {
     def onChange(e: TypedInputFormEvent => Unit): js.Function1[TypedInputFormEvent, Unit] = js.Any.fromFunction1(e)
     def onInput(e: TypedInputFormEvent => Unit): js.Function1[TypedInputFormEvent, Unit] = js.Any.fromFunction1(e)
     def onSubmit(e: TypedInputFormEvent => Unit): js.Function1[TypedInputFormEvent, Unit] = js.Any.fromFunction1(e)
   }
 
-  object checkbox extends ElementEventListeners[HTMLInputElement] {
+  object checkbox extends ElementEventListeners[html.Input] {
     def onChange(e: TypedCheckboxFormEvent => Unit): js.Function1[TypedCheckboxFormEvent, Unit] = js.Any.fromFunction1(e)
     def onInput(e: TypedCheckboxFormEvent => Unit): js.Function1[TypedCheckboxFormEvent, Unit] = js.Any.fromFunction1(e)
     def onSubmit(e: TypedCheckboxFormEvent => Unit): js.Function1[TypedCheckboxFormEvent, Unit] = js.Any.fromFunction1(e)
   }
 
-  object option extends ElementEventListeners[HTMLInputElement] {
+  object option extends ElementEventListeners[html.Input] {
     def onChange(e: TypedOptionFormEvent => Unit): js.Function1[TypedOptionFormEvent, Unit] = js.Any.fromFunction1(e)
     def onInput(e: TypedOptionFormEvent => Unit): js.Function1[TypedOptionFormEvent, Unit] = js.Any.fromFunction1(e)
     def onSubmit(e: TypedOptionFormEvent => Unit): js.Function1[TypedOptionFormEvent, Unit] = js.Any.fromFunction1(e)
   }
 
   object form {
-    def onChange(e: TypedFormEvent[HTMLFormElement] => Unit): js.Function1[TypedFormEvent[HTMLFormElement], Unit] = js.Any.fromFunction1(e)
-    def onInput(e: TypedFormEvent[HTMLFormElement] => Unit): js.Function1[TypedFormEvent[HTMLFormElement], Unit] = js.Any.fromFunction1(e)
-    def onSubmit(e: TypedFormEvent[HTMLFormElement] => Unit): js.Function1[TypedFormEvent[HTMLFormElement], Unit] = js.Any.fromFunction1(e)
+    def onChange(e: TypedFormEvent[html.Form] => Unit): js.Function1[TypedFormEvent[html.Form], Unit] = js.Any.fromFunction1(e)
+    def onInput(e: TypedFormEvent[html.Form] => Unit): js.Function1[TypedFormEvent[html.Form], Unit] = js.Any.fromFunction1(e)
+    def onSubmit(e: TypedFormEvent[html.Form] => Unit): js.Function1[TypedFormEvent[html.Form], Unit] = js.Any.fromFunction1(e)
   }
 
-  object button extends ElementEventListeners[HTMLInputElement]
+  object button extends ElementEventListeners[html.Input]
 
 }
 

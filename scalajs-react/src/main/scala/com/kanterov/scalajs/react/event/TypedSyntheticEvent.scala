@@ -18,7 +18,7 @@
 package com.kanterov.scalajs.react.event
 
 import org.scalajs.dom
-import org.scalajs.dom.HTMLInputElement
+import org.scalajs.dom.html
 
 import scala.scalajs.js
 
@@ -37,16 +37,16 @@ trait TypedSyntheticEvent[+T <: dom.EventTarget] extends SyntheticEvent {
 @js.native trait TypedWheelEvent[T <: dom.EventTarget] extends WheelEvent with TypedSyntheticEvent[T]
 
 @js.native
-trait TypedInputFormEvent extends TypedFormEvent[HTMLInputElement] {
+trait TypedInputFormEvent extends TypedFormEvent[html.Input] {
   val value: String = js.native
 }
 
 @js.native
-trait TypedCheckboxFormEvent extends TypedFormEvent[HTMLInputElement] {
+trait TypedCheckboxFormEvent extends TypedFormEvent[html.Input] {
   val checked: Boolean = js.native
 }
 
 @js.native
-trait TypedOptionFormEvent extends TypedFormEvent[HTMLInputElement] {
+trait TypedOptionFormEvent extends TypedFormEvent[html.Input] {
   val selected: Boolean = js.native
 }

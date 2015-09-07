@@ -25,7 +25,7 @@ object React {
 
   val DOM = ReactDOM
 
-  def renderComponent[C <: ReactDOM](dom: C, container: HTMLElement): C = {
+  def renderComponent[C <: ReactDOM](dom: C, container: html.Element): C = {
     ReactJS.renderComponent(dom, container)
   }
 

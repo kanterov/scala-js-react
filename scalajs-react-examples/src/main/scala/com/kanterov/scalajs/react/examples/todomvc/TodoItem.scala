@@ -4,7 +4,7 @@ import com.kanterov.scalajs.react._
 import com.kanterov.scalajs.react.util._
 import org.scalajs.dom._
 
-import org.scalajs.dom.extensions.KeyCode
+import org.scalajs.dom.ext.KeyCode
 
 object TodoItem extends TypedReactSpec with TypedEventListeners {
 
@@ -33,7 +33,7 @@ object TodoItem extends TypedReactSpec with TypedEventListeners {
 
     val handleEdit = element.onEvent(e => {
       props.onEdit(() => {
-        val node = self.refs(editField).getDOMNode().asInstanceOf[HTMLInputElement]
+        val node = self.refs(editField).getDOMNode().asInstanceOf[html.Input]
         node.focus()
         node.setSelectionRange(node.value.length, node.value.length)
       })
