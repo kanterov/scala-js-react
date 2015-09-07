@@ -18,12 +18,12 @@ object ScalaJSReact extends Build {
 
   val sourceMapOpt = {
     val a = new java.io.File("").toURI.toString.replaceFirst("/$", "")
-    val g = "https://raw.githubusercontent.com/kanterov/scala-js-react/release-0.3.4"
+    val g = "https://raw.githubusercontent.com/kanterov/scala-js-react/master"
     s"-P:scalajs:mapSourceURI:$a->$g/"
   }
 
   val commonSettings = Seq(
-    version := "0.3.4",
+    version := "0.4.0-SNAPSHOT",
     organization := "com.kanterov.scalajs",
     scalaVersion := SCALA_VERSION,
     licenses := Seq("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0.html")),
