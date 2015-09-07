@@ -26,6 +26,7 @@ import com.kanterov.scalajs.react.ReactDOM
  * Interop with react.js
  */
 @JSName("React")
+@js.native
 object ReactJS extends js.Object {
   def createClass[State, Props, T](spec: js.Dictionary[T]): ReactComponentClass[State, Props] = js.native
 

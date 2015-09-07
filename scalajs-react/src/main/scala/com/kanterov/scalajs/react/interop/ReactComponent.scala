@@ -20,8 +20,10 @@ package com.kanterov.scalajs.react.interop
 import scala.scalajs.js
 import com.kanterov.scalajs.react.ReactDOM
 
+@js.native
 trait ReactComponentClass[State, Props] extends js.Function1[js.Dictionary[Any], ReactComponent[State, Props]]
 
+@js.native
 trait ReactComponent[State, Props] extends ReactDOM {
   def setState(state: State): Unit = js.native
 }

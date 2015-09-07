@@ -24,6 +24,7 @@ object ContentEditable extends TypedReactSpec {
   }
 }
 
+@js.native
 trait Focusable extends js.Object {
   def focus(): Unit = js.native
 }

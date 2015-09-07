@@ -22,27 +22,31 @@ import org.scalajs.dom.HTMLInputElement
 
 import scala.scalajs.js
 
+@js.native
 trait TypedSyntheticEvent[+T <: dom.EventTarget] extends SyntheticEvent {
   override val target: T = js.native
 }
 
-trait TypedClipboardEvent[T <: dom.EventTarget] extends ClipboardEvent with TypedSyntheticEvent[T]
-trait TypedFocusEvent[T <: dom.EventTarget] extends FocusEvent with TypedSyntheticEvent[T]
-trait TypedFormEvent[T <: dom.EventTarget] extends FormEvent with TypedSyntheticEvent[T]
-trait TypedKeyboardEvent[T <: dom.EventTarget] extends KeyboardEvent with TypedSyntheticEvent[T]
-trait TypedMouseEvent[T <: dom.EventTarget] extends MouseEvent with TypedSyntheticEvent[T]
-trait TypedTouchEvent[T <: dom.EventTarget] extends TouchEvent with TypedSyntheticEvent[T]
-trait TypedUIEvent[T <: dom.EventTarget] extends UIEvent with TypedSyntheticEvent[T]
-trait TypedWheelEvent[T <: dom.EventTarget] extends WheelEvent with TypedSyntheticEvent[T]
+@js.native trait TypedClipboardEvent[T <: dom.EventTarget] extends ClipboardEvent with TypedSyntheticEvent[T]
+@js.native trait TypedFocusEvent[T <: dom.EventTarget] extends FocusEvent with TypedSyntheticEvent[T]
+@js.native trait TypedFormEvent[T <: dom.EventTarget] extends FormEvent with TypedSyntheticEvent[T]
+@js.native trait TypedKeyboardEvent[T <: dom.EventTarget] extends KeyboardEvent with TypedSyntheticEvent[T]
+@js.native trait TypedMouseEvent[T <: dom.EventTarget] extends MouseEvent with TypedSyntheticEvent[T]
+@js.native trait TypedTouchEvent[T <: dom.EventTarget] extends TouchEvent with TypedSyntheticEvent[T]
+@js.native trait TypedUIEvent[T <: dom.EventTarget] extends UIEvent with TypedSyntheticEvent[T]
+@js.native trait TypedWheelEvent[T <: dom.EventTarget] extends WheelEvent with TypedSyntheticEvent[T]
 
+@js.native
 trait TypedInputFormEvent extends TypedFormEvent[HTMLInputElement] {
   val value: String = js.native
 }
 
+@js.native
 trait TypedCheckboxFormEvent extends TypedFormEvent[HTMLInputElement] {
   val checked: Boolean = js.native
 }
 
+@js.native
 trait TypedOptionFormEvent extends TypedFormEvent[HTMLInputElement] {
   val selected: Boolean = js.native
 }

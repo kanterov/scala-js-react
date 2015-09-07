@@ -21,6 +21,7 @@ import org.scalajs.dom
 
 import scala.scalajs.js
 
+@js.native
 trait SyntheticEvent extends js.Object {
   val bubbles: Boolean = js.native
   val cancelable: Boolean = js.native
@@ -39,10 +40,12 @@ trait SyntheticEvent extends js.Object {
   val `type`: String = js.native
 }
 
+@js.native
 trait ClipboardEvent extends SyntheticEvent {
   val clipboardData: dom.DataTransfer = js.native
 }
 
+@js.native
 trait KeyboardEvent extends SyntheticEvent {
   val altKey: Boolean = js.native
   val ctrlKey: Boolean = js.native
@@ -60,12 +63,15 @@ trait KeyboardEvent extends SyntheticEvent {
   def getModifierState(keyArg: String): Boolean = js.native
 }
 
+@js.native
 trait FocusEvent extends SyntheticEvent {
   val relatedTarget: dom.EventTarget = js.native
 }
 
+@js.native
 trait FormEvent extends SyntheticEvent
 
+@js.native
 trait MouseEvent extends SyntheticEvent {
   val altKey: Boolean = js.native
   val ctrlKey: Boolean = js.native
@@ -85,6 +91,7 @@ trait MouseEvent extends SyntheticEvent {
   val relatedTarget: dom.EventTarget = js.native
 }
 
+@js.native
 trait TouchEvent extends SyntheticEvent {
   val altKey: Boolean = js.native
   val ctrlKey: Boolean = js.native
@@ -98,11 +105,13 @@ trait TouchEvent extends SyntheticEvent {
   def getModifierState(keyArg: String): Boolean = js.native
 }
 
+@js.native
 trait UIEvent extends SyntheticEvent {
   val detail: Int = js.native
   val view: dom.Window = js.native
 }
 
+@js.native
 trait WheelEvent extends SyntheticEvent {
   val deltaMode: Int = js.native
   val deltaX: Double = js.native

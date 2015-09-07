@@ -36,7 +36,6 @@ class ReactDOMBuffer extends scala.collection.mutable.ArrayBuffer[ReactDOM] {
 
       case it: Iterator[_] => it foreach &+
       case ns: Iterable[_] => this &+ ns.iterator
-      case ns: Array[_] => this &+ ns.iterator
       case n => super.+=(n.asInstanceOf[ReactDOM])
     }
 

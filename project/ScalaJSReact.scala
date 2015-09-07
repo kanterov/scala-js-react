@@ -6,11 +6,11 @@ import org.scalajs.sbtplugin.ScalaJSPlugin.autoImport._
 
 object ScalaJSReact extends Build {
 
-  val SCALA_VERSION = "2.11.5"
+  val SCALA_VERSION = "2.11.7"
 
   val uTestVersion = "0.3.0"
   val scalajsDomVersion = "0.7.0"
-  val scalaXml = "org.scala-lang.modules" %% "scala-xml" % "1.0.2"
+  val scalaXml = "org.scala-lang.modules" %% "scala-xml" % "1.0.5"
   val scalaReflect = "org.scala-lang" % "scala-reflect" % SCALA_VERSION
   val macroParadisePlugin = compilerPlugin("org.scalamacros" % "paradise" % "2.0.1" cross CrossVersion.full)
   val jasmine = "org.scala-js" %% "scalajs-jasmine-test-framework" % scalaJSVersion % "test"
